@@ -1,0 +1,11 @@
+C:\Users\abahm\Desktop\TP2_Bibliotheque\BibliothequeTP2\BibliothequeTP2.BLL\obj\Debug\BibliothequeTP2.BLL.csproj.AssemblyReference.cache
+C:\Users\abahm\Desktop\TP2_Bibliotheque\BibliothequeTP2\BibliothequeTP2.BLL\obj\Debug\BibliothequeTP2.BLL.csproj.CoreCompileInputs.cache
+C:\Users\abahm\Desktop\TP2_Bibliotheque\BibliothequeTP2\BibliothequeTP2.BLL\bin\Debug\BibliothequeTP2.BLL.dll
+C:\Users\abahm\Desktop\TP2_Bibliotheque\BibliothequeTP2\BibliothequeTP2.BLL\bin\Debug\BibliothequeTP2.BLL.pdb
+C:\Users\abahm\Desktop\TP2_Bibliotheque\BibliothequeTP2\BibliothequeTP2.BLL\bin\Debug\BibliothequeTP2.DAL.dll
+C:\Users\abahm\Desktop\TP2_Bibliotheque\BibliothequeTP2\BibliothequeTP2.BLL\bin\Debug\BibliothequeTP2.Entities.dll
+C:\Users\abahm\Desktop\TP2_Bibliotheque\BibliothequeTP2\BibliothequeTP2.BLL\bin\Debug\BibliothequeTP2.DAL.pdb
+C:\Users\abahm\Desktop\TP2_Bibliotheque\BibliothequeTP2\BibliothequeTP2.BLL\bin\Debug\BibliothequeTP2.Entities.pdb
+C:\Users\abahm\Desktop\TP2_Bibliotheque\BibliothequeTP2\BibliothequeTP2.BLL\obj\Debug\Biblioth.2526981D.Up2Date
+C:\Users\abahm\Desktop\TP2_Bibliotheque\BibliothequeTP2\BibliothequeTP2.BLL\obj\Debug\BibliothequeTP2.BLL.dll
+C:\Users\abahm\Desktop\TP2_Bibliotheque\BibliothequeTP2\BibliothequeTP2.BLL\obj\Debug\BibliothequeTP2.BLL.pdb
