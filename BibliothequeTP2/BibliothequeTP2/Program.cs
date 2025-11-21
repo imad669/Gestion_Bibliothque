@@ -1,8 +1,8 @@
 ﻿using BibliothequeTP2.DAL;
 using BibliothequeTP2.Entities;
 using System;
-using System.Data.SqlClient;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace BibliothequeTP2
 {
@@ -14,7 +14,7 @@ namespace BibliothequeTP2
 
         static void Main(string[] args)
         {
-            Console.Title = "Bibliothèque TP2 - Terminé 20/20";
+            Console.Title = "Bibliothèque TP2 - Version CRUD Structurée";
             while (true)
             {
                 Console.Clear();
@@ -23,27 +23,19 @@ namespace BibliothequeTP2
                 Console.WriteLine("     MENU PRINCIPAL - BIBLIOTHÈQUE");
                 Console.WriteLine("══════════════════════════════════════");
                 Console.ResetColor();
-                Console.WriteLine("1 - Lister les livres");
-                Console.WriteLine("2 - Ajouter un usager");
-                Console.WriteLine("3 - Emprunter un livre");
-                Console.WriteLine("4 - Retourner un livre");
-                Console.WriteLine("5 - Voir les emprunts d’un usager");
-                Console.WriteLine("6 - Supprimer un livre / usager");
-                Console.WriteLine("7 - Générer un rapport");
-                Console.WriteLine("8 - Quitter");
+                Console.WriteLine("1 - Gérer les LIVRES");
+                Console.WriteLine("2 - Gérer les USAGERS");
+                Console.WriteLine("3 - Gérer les EMPRUNTS");
+                Console.WriteLine("0 - Quitter");
                 Console.Write("\nVotre choix : ");
                 string choix = Console.ReadLine()?.Trim();
 
                 switch (choix)
                 {
-                    case "1": ListerLivres(); break;
-                    case "2": AjouterUsager(); break;
-                    case "3": EmprunterLivre(); break;
-                    case "4": RetournerLivre(); break;
-                    case "5": VoirEmpruntsUsager(); break;
-                    case "6": MenuSupprimer(); break;
-                    case "7": GenererRapport(); break;
-                    case "8":
+                    case "1": MenuLivres(); break;
+                    case "2": MenuUsagers(); break;
+                    case "3": MenuEmprunts(); break;
+                    case "0":
                         Console.Clear();
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("Merci et à bientôt !");
@@ -56,48 +48,211 @@ namespace BibliothequeTP2
             }
         }
 
+        // === MENU LIVRES ===
+        static void MenuLivres()
+        {
+            while (true)
+            {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("════ GESTION DES LIVRES ════");
+                Console.ResetColor();
+                Console.WriteLine("1 - Lister les livres");
+                Console.WriteLine("2 - Ajouter un livre");
+                Console.WriteLine("3 - Modifier un livre");
+                Console.WriteLine("4 - Supprimer un livre");
+                Console.WriteLine("0 - Retour");
+                Console.Write("\nVotre choix : ");
+                string c = Console.ReadLine()?.Trim();
+
+                switch (c)
+                {
+                    case "1": ListerLivres(); break;
+                    case "2": AjouterLivre(); break;
+                    case "3": ModifierLivre(); break;
+                    case "4": SupprimerLivre(); break;
+                    case "0": return;
+                    default: MessageErreur("Choix invalide"); break;
+                }
+            }
+        }
+
         static void ListerLivres()
         {
-            Console.Clear();
             var livres = livreRepo.GetAll();
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"Il y a {livres.Count} livre(s) dans la bibliothèque :\n");
-            Console.ResetColor();
+            Console.WriteLine($"\nIl y a {livres.Count} livre(s) :");
             foreach (var l in livres)
-                Console.WriteLine($"{l.IdLivre,-3} - {l.Titre,-35} | {l.Auteur,-20} ({l.Annee}) | Stock: {l.QuantiteEnStock,-2} | Dispo: {l.QuantiteDisponible,-2}");
+                Console.WriteLine($"{l.IdLivre} - {l.Titre} | {l.Auteur} ({l.Annee}) | Stock: {l.QuantiteEnStock} | Dispo: {l.QuantiteDisponible}");
             Pause();
         }
 
-        // AJOUT USAGER : NOM + TÉLÉPHONE + EMAIL (PAS DE PRÉNOM)
+        static void AjouterLivre()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("════ AJOUTER UN LIVRE ════");
+            Console.ResetColor();
+
+            Console.Write("Titre : "); string titre = Console.ReadLine()?.Trim() ?? "";
+            Console.Write("Auteur : "); string auteur = Console.ReadLine()?.Trim() ?? "";
+            Console.Write("Année (facultatif) : ");
+            string anneeStr = Console.ReadLine()?.Trim();
+            int? annee = int.TryParse(anneeStr, out int a) ? a : (int?)null;
+            Console.Write("ISBN (facultatif) : "); string isbn = Console.ReadLine()?.Trim() ?? "";
+            Console.Write("Catégorie (facultatif) : "); string cat = Console.ReadLine()?.Trim() ?? "";
+            int stock = DemanderEntier("Quantité en stock");
+
+            var livre = new Livre
+            {
+                Titre = titre,
+                Auteur = auteur,
+                Annee = annee,
+                ISBN = isbn,
+                Categorie = cat,
+                QuantiteEnStock = stock,
+                QuantiteDisponible = stock
+            };
+
+            livreRepo.Add(livre);
+            MessageSucces("Livre ajouté avec succès !");
+        }
+
+        static void ModifierLivre()
+        {
+            int id = DemanderEntier("ID du livre à modifier");
+            var livre = livreRepo.GetById(id);
+            if (livre == null) { MessageErreur("Livre introuvable"); return; }
+
+            Console.Write("Nouveau titre : "); livre.Titre = Console.ReadLine();
+            Console.Write("Nouvel auteur : "); livre.Auteur = Console.ReadLine();
+            // Tu peux ajouter ici la modification de Année/ISBN/Catégorie/Stock si nécessaire.
+            livreRepo.Update(livre);
+            MessageSucces("Livre modifié !");
+        }
+
+        static void SupprimerLivre()
+        {
+            int id = DemanderEntier("ID du livre à supprimer");
+            livreRepo.Delete(id);
+            MessageSucces("Livre supprimé !");
+        }
+
+        // === MENU USAGERS ===
+        static void MenuUsagers()
+        {
+            while (true)
+            {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("════ GESTION DES USAGERS ════");
+                Console.ResetColor();
+                Console.WriteLine("1 - Lister les usagers");
+                Console.WriteLine("2 - Ajouter un usager");
+                Console.WriteLine("3 - Modifier un usager");
+                Console.WriteLine("4 - Supprimer un usager");
+                Console.WriteLine("0 - Retour");
+                Console.Write("\nVotre choix : ");
+                string c = Console.ReadLine()?.Trim();
+
+                switch (c)
+                {
+                    case "1": ListerUsagers(); break;
+                    case "2": AjouterUsager(); break;
+                    case "3": ModifierUsager(); break;
+                    case "4": SupprimerUsager(); break;
+                    case "0": return;
+                    default: MessageErreur("Choix invalide"); break;
+                }
+            }
+        }
+
+        static void ListerUsagers()
+        {
+            var usagers = usagerRepo.GetAll();
+            Console.WriteLine($"\nIl y a {usagers.Count} usager(s) :");
+            foreach (var u in usagers)
+                Console.WriteLine($"{u.IdUsager} - {u.Nom} | {u.Email} | {u.Telephone}");
+            Pause();
+        }
+
         static void AjouterUsager()
         {
             Console.Clear();
-            Console.Write("Nom                : ");
-            string nom = Console.ReadLine()?.Trim() ?? "";
+            Console.WriteLine("=== AJOUTER UN USAGER ===");
 
-            Console.Write("Téléphone (facultatif) : ");
-            string telephone = Console.ReadLine()?.Trim() ?? "";
+            Console.Write("Nom : "); string nom = Console.ReadLine();
+            Console.Write("Email : "); string email = Console.ReadLine();
+            Console.Write("Téléphone : "); string tel = Console.ReadLine();
 
-            Console.Write("Email (facultatif) : ");
-            string email = Console.ReadLine()?.Trim() ?? "";
+            usagerRepo.Add(new Usager { Nom = nom, Email = email, Telephone = tel });
+            MessageSucces("Usager ajouté !");
+        }
 
-            usagerRepo.Add(new Usager
+        static void ModifierUsager()
+        {
+            int id = DemanderEntier("ID de l'usager à modifier");
+            var u = usagerRepo.GetById(id);
+            if (u == null) { MessageErreur("Usager introuvable"); return; }
+
+            Console.Write("Nouveau nom : "); u.Nom = Console.ReadLine();
+            Console.Write("Nouvel email : "); u.Email = Console.ReadLine();
+            Console.Write("Nouveau téléphone : "); u.Telephone = Console.ReadLine();
+            usagerRepo.Update(u);
+            MessageSucces("Usager modifié !");
+        }
+
+        static void SupprimerUsager()
+        {
+            int id = DemanderEntier("ID de l'usager à supprimer");
+            usagerRepo.Delete(id);
+            MessageSucces("Usager supprimé !");
+        }
+
+        // === MENU EMPRUNTS ===
+        static void MenuEmprunts()
+        {
+            while (true)
             {
-                Nom = nom,
-                Email = email,
-                Telephone = telephone
-            });
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine("════ GESTION DES EMPRUNTS ════");
+                Console.ResetColor();
+                Console.WriteLine("1 - Lister les emprunts");
+                Console.WriteLine("2 - Emprunter un livre");
+                Console.WriteLine("3 - Retourner un livre");
+                Console.WriteLine("4 - Modifier un emprunt");
+                Console.WriteLine("5 - Supprimer un emprunt");
+                Console.WriteLine("0 - Retour");
+                Console.Write("\nVotre choix : ");
+                string c = Console.ReadLine()?.Trim();
 
-            MessageSucces("Usager ajouté avec succès !");
+                switch (c)
+                {
+                    case "1": ListerEmprunts(); break;
+                    case "2": EmprunterLivre(); break;
+                    case "3": RetournerLivre(); break;
+                    case "4": ModifierEmprunt(); break;
+                    case "5": SupprimerEmprunt(); break;
+                    case "0": return;
+                    default: MessageErreur("Choix invalide"); break;
+                }
+            }
+        }
+
+        static void ListerEmprunts()
+        {
+            var emprunts = empruntRepo.GetAll();
+            Console.WriteLine($"\nIl y a {emprunts.Count} emprunt(s) :");
+            foreach (var e in emprunts)
+                Console.WriteLine($"{e.IdEmprunt} - Livre: {e.TitreLivre} | Usager: {e.IdUsager} | Emprunté le {e.DateEmprunt:dd/MM/yyyy} | Retour prévu {e.DateRetourPrevue:dd/MM/yyyy} | Retour réel {(e.DateRetourReel.HasValue ? e.DateRetourReel.Value.ToString("dd/MM/yyyy") : "-")}");
+            Pause();
         }
 
         static void EmprunterLivre()
         {
-            ListerLivres();
             int idU = DemanderEntier("ID de l'usager");
-            int idL = DemanderEntier("ID du livre à emprunter");
+            int idL = DemanderEntier("ID du livre");
             DateTime date = DemanderDate("Date de retour prévue (yyyy-MM-dd)");
-
             try
             {
                 empruntRepo.Emprunter(idU, idL, date);
@@ -105,19 +260,17 @@ namespace BibliothequeTP2
             }
             catch
             {
-                MessageErreur("Impossible d'emprunter (livre indisponible ou usager inconnu)");
+                MessageErreur("Impossible d'emprunter (livre indisponible ou usager inconnu).");
             }
         }
 
         static void RetournerLivre()
         {
-            ListerLivres();
             int idL = DemanderEntier("ID du livre à retourner");
-
             try
             {
                 empruntRepo.Retourner(idL);
-                MessageSucces("Retour enregistré avec succès !");
+                MessageSucces("Retour enregistré !");
             }
             catch
             {
@@ -125,114 +278,25 @@ namespace BibliothequeTP2
             }
         }
 
-        static void VoirEmpruntsUsager()
+        static void ModifierEmprunt()
         {
-            Console.Clear();
-            int id = DemanderEntier("ID de l'usager");
-            var emprunts = empruntRepo.GetEmpruntsEnCours(id);
+            int id = DemanderEntier("ID de l'emprunt à modifier");
+            var e = empruntRepo.GetById(id);
+            if (e == null) { MessageErreur("Emprunt introuvable"); return; }
 
-            if (!emprunts.Any())
-            {
-                Console.WriteLine("Aucun emprunt en cours.");
-            }
-            else
-            {
-                Console.WriteLine($"\nEmprunts en cours pour l'usager {id} :\n");
-                foreach (var e in emprunts)
-                {
-                    Console.WriteLine($"• {e.TitreLivre} - Emprunté le {e.DateEmprunt:dd/MM/yyyy} - Retour prévu le {e.DateRetourPrevue:dd/MM/yyyy}");
-                }
-            }
-            Pause();
+            e.DateRetourPrevue = DemanderDate("Nouvelle date de retour prévue (yyyy-MM-dd)");
+            empruntRepo.Update(e);
+            MessageSucces("Emprunt modifié !");
         }
 
-        static void MenuSupprimer()
+        static void SupprimerEmprunt()
         {
-            while (true)
-            {
-                Console.Clear();
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("════ SUPPRESSION ════");
-                Console.ResetColor();
-                Console.WriteLine("1 - Supprimer un livre");
-                Console.WriteLine("2 - Supprimer un usager");
-                Console.WriteLine("0 - Retour");
-                Console.Write("\nChoix : ");
-                string c = Console.ReadLine()?.Trim();
-
-                switch (c)
-                {
-                    case "1": SupprimerLivre(); return;
-                    case "2": SupprimerUsager(); return;
-                    case "0": return;
-                    default: MessageErreur("Choix invalide"); break;
-                }
-            }
+            int id = DemanderEntier("ID de l'emprunt à supprimer");
+            empruntRepo.Delete(id);
+            MessageSucces("Emprunt supprimé !");
         }
 
-        static void SupprimerLivre()
-        {
-            ListerLivres();
-            int id = DemanderEntier("ID du livre à supprimer définitivement");
-
-            using (var conn = Database.GetConnection())
-            {
-                conn.Open();
-                new SqlCommand("DELETE FROM Emprunts WHERE IdLivre = @id", conn)
-                { Parameters = { new SqlParameter("@id", id) } }.ExecuteNonQuery();
-                new SqlCommand("DELETE FROM Livres WHERE IdLivre = @id", conn)
-                { Parameters = { new SqlParameter("@id", id) } }.ExecuteNonQuery();
-            }
-            MessageSucces("Livre supprimé !");
-        }
-
-        static void SupprimerUsager()
-        {
-            int id = DemanderEntier("ID de l'usager à supprimer");
-
-            using (var conn = Database.GetConnection())
-            {
-                conn.Open();
-                new SqlCommand("DELETE FROM Emprunts WHERE IdUsager = @id", conn)
-                { Parameters = { new SqlParameter("@id", id) } }.ExecuteNonQuery();
-                new SqlCommand("DELETE FROM Usagers WHERE IdUsager = @id", conn)
-                { Parameters = { new SqlParameter("@id", id) } }.ExecuteNonQuery();
-            }
-            MessageSucces("Usager supprimé !");
-        }
-
-        static void GenererRapport()
-        {
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("════════════════════════════════════");
-            Console.WriteLine("        RAPPORT COMPLET");
-            Console.WriteLine("════════════════════════════════════\n");
-            Console.ResetColor();
-
-            var livres = livreRepo.GetAll();
-            var emprunts = usagerRepo.GetAll()
-                .SelectMany(u => empruntRepo.GetEmpruntsEnCours(u.IdUsager))
-                .ToList();
-
-            Console.WriteLine($"Total livres                : {livres.Count}");
-            Console.WriteLine($"Livres disponibles          : {livres.Sum(l => l.QuantiteDisponible)}");
-            Console.WriteLine($"Livres empruntés            : {emprunts.Count}");
-            Console.WriteLine($"Taux d'occupation           : {(livres.Sum(l => l.QuantiteEnStock) > 0 ? (emprunts.Count * 100.0 / livres.Sum(l => l.QuantiteEnStock)) : 0):F1}%\n");
-
-            Console.WriteLine("Top 5 des livres les plus empruntés :");
-            var top5 = livres.OrderByDescending(l => l.QuantiteEnStock - l.QuantiteDisponible).Take(5);
-            foreach (var l in top5)
-            {
-                int nb = l.QuantiteEnStock - l.QuantiteDisponible;
-                if (nb > 0)
-                    Console.WriteLine($"   • {l.Titre} → {nb} emprunt(s)");
-            }
-
-            Pause();
-        }
-
-        // FONCTIONS UTILITAIRES
+        // === UTILITAIRES ===
         static int DemanderEntier(string message)
         {
             while (true)
@@ -251,7 +315,7 @@ namespace BibliothequeTP2
                 Console.Write($"{message} : ");
                 if (DateTime.TryParse(Console.ReadLine()?.Trim(), out DateTime date))
                     return date;
-                MessageErreur("Format de date invalide (utilisez yyyy-MM-dd)");
+                MessageErreur("Format de date invalide (utilisez yyyy-MM-dd).");
             }
         }
 

@@ -3,7 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{432E9E1C-3DF3-413B-864F-AD01968669D8}|BibliothequeTP2.DAL\\BibliothequeTP2.DAL.csproj|c:\\users\\abahm\\desktop\\tp2_bibliotheque\\bibliothequetp2\\bibliothequetp2.dal\\usagerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4A1084A1-B571-40D8-8ACE-BF06E9B45A67}|BibliothequeTP2\\BibliothequeTP2.csproj|c:\\users\\abahm\\desktop\\tp2_bibliotheque\\bibliothequetp2\\bibliothequetp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A1084A1-B571-40D8-8ACE-BF06E9B45A67}|BibliothequeTP2\\BibliothequeTP2.csproj|solutionrelative:bibliothequetp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432E9E1C-3DF3-413B-864F-AD01968669D8}|BibliothequeTP2.DAL\\BibliothequeTP2.DAL.csproj|C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\bibliothequetp2.dal\\empruntrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{432E9E1C-3DF3-413B-864F-AD01968669D8}|BibliothequeTP2.DAL\\BibliothequeTP2.DAL.csproj|solutionrelative:bibliothequetp2.dal\\empruntrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432E9E1C-3DF3-413B-864F-AD01968669D8}|BibliothequeTP2.DAL\\BibliothequeTP2.DAL.csproj|C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\bibliothequetp2.dal\\livrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{432E9E1C-3DF3-413B-864F-AD01968669D8}|BibliothequeTP2.DAL\\BibliothequeTP2.DAL.csproj|solutionrelative:bibliothequetp2.dal\\livrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432E9E1C-3DF3-413B-864F-AD01968669D8}|BibliothequeTP2.DAL\\BibliothequeTP2.DAL.csproj|C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\bibliothequetp2.dal\\usagerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{432E9E1C-3DF3-413B-864F-AD01968669D8}|BibliothequeTP2.DAL\\BibliothequeTP2.DAL.csproj|solutionrelative:bibliothequetp2.dal\\usagerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,28 +27,16 @@
       "RelativeMoniker": "D:0:0:{14C4F432-FE03-4529-AC1A-7E084B9EA199}|BibliothequeTP2.Entities\\BibliothequeTP2.Entities.csproj|solutionrelative:bibliothequetp2.entities\\livre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{14C4F432-FE03-4529-AC1A-7E084B9EA199}|BibliothequeTP2.Entities\\BibliothequeTP2.Entities.csproj|C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\bibliothequetp2.entities\\emprunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C4F432-FE03-4529-AC1A-7E084B9EA199}|BibliothequeTP2.Entities\\BibliothequeTP2.Entities.csproj|solutionrelative:bibliothequetp2.entities\\emprunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{14C4F432-FE03-4529-AC1A-7E084B9EA199}|BibliothequeTP2.Entities\\BibliothequeTP2.Entities.csproj|C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\bibliothequetp2.entities\\usager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14C4F432-FE03-4529-AC1A-7E084B9EA199}|BibliothequeTP2.Entities\\BibliothequeTP2.Entities.csproj|solutionrelative:bibliothequetp2.entities\\usager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A1084A1-B571-40D8-8ACE-BF06E9B45A67}|BibliothequeTP2\\BibliothequeTP2.csproj|C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\bibliothequetp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A1084A1-B571-40D8-8ACE-BF06E9B45A67}|BibliothequeTP2\\BibliothequeTP2.csproj|solutionrelative:bibliothequetp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{432E9E1C-3DF3-413B-864F-AD01968669D8}|BibliothequeTP2.DAL\\BibliothequeTP2.DAL.csproj|C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\bibliothequetp2.dal\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{432E9E1C-3DF3-413B-864F-AD01968669D8}|BibliothequeTP2.DAL\\BibliothequeTP2.DAL.csproj|solutionrelative:bibliothequetp2.dal\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{432E9E1C-3DF3-413B-864F-AD01968669D8}|BibliothequeTP2.DAL\\BibliothequeTP2.DAL.csproj|C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\bibliothequetp2.dal\\livrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{432E9E1C-3DF3-413B-864F-AD01968669D8}|BibliothequeTP2.DAL\\BibliothequeTP2.DAL.csproj|solutionrelative:bibliothequetp2.dal\\livrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{432E9E1C-3DF3-413B-864F-AD01968669D8}|BibliothequeTP2.DAL\\BibliothequeTP2.DAL.csproj|C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\bibliothequetp2.dal\\empruntrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{432E9E1C-3DF3-413B-864F-AD01968669D8}|BibliothequeTP2.DAL\\BibliothequeTP2.DAL.csproj|solutionrelative:bibliothequetp2.dal\\empruntrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14C4F432-FE03-4529-AC1A-7E084B9EA199}|BibliothequeTP2.Entities\\BibliothequeTP2.Entities.csproj|C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\bibliothequetp2.entities\\emprunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14C4F432-FE03-4529-AC1A-7E084B9EA199}|BibliothequeTP2.Entities\\BibliothequeTP2.Entities.csproj|solutionrelative:bibliothequetp2.entities\\emprunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -53,57 +53,109 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2\\Program.cs",
               "RelativeDocumentMoniker": "BibliothequeTP2\\Program.cs",
               "ToolTip": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2\\Program.cs",
               "RelativeToolTip": "BibliothequeTP2\\Program.cs",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAAAI4AAACHAAAAAAAAAA==",
+              "ViewState": "AgIAACoBAAAAAAAAAAAAwE0BAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T18:17:55.917Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsagerRepository.cs",
-              "DocumentMoniker": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.DAL\\UsagerRepository.cs",
-              "RelativeDocumentMoniker": "BibliothequeTP2.DAL\\UsagerRepository.cs",
-              "ToolTip": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.DAL\\UsagerRepository.cs",
-              "RelativeToolTip": "BibliothequeTP2.DAL\\UsagerRepository.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBkAAABvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T19:42:59.011Z",
+              "WhenOpened": "2025-11-19T18:17:55.917Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Emprunt.cs",
-              "DocumentMoniker": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.Entities\\Emprunt.cs",
-              "RelativeDocumentMoniker": "BibliothequeTP2.Entities\\Emprunt.cs",
-              "ToolTip": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.Entities\\Emprunt.cs",
-              "RelativeToolTip": "BibliothequeTP2.Entities\\Emprunt.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T18:34:04.716Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "LivreRepository.cs",
               "DocumentMoniker": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.DAL\\LivreRepository.cs",
               "RelativeDocumentMoniker": "BibliothequeTP2.DAL\\LivreRepository.cs",
               "ToolTip": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.DAL\\LivreRepository.cs",
               "RelativeToolTip": "BibliothequeTP2.DAL\\LivreRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAmwIEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-19T18:36:35.485Z"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmpruntRepository.cs",
+              "DocumentMoniker": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.DAL\\EmpruntRepository.cs",
+              "RelativeDocumentMoniker": "BibliothequeTP2.DAL\\EmpruntRepository.cs",
+              "ToolTip": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.DAL\\EmpruntRepository.cs",
+              "RelativeToolTip": "BibliothequeTP2.DAL\\EmpruntRepository.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwLoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T19:48:52.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Usager.cs",
+              "DocumentMoniker": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.Entities\\Usager.cs",
+              "RelativeDocumentMoniker": "BibliothequeTP2.Entities\\Usager.cs",
+              "ToolTip": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.Entities\\Usager.cs",
+              "RelativeToolTip": "BibliothequeTP2.Entities\\Usager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T18:33:11.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RapportServices.cs",
+              "DocumentMoniker": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.BLL\\RapportServices.cs",
+              "RelativeDocumentMoniker": "BibliothequeTP2.BLL\\RapportServices.cs",
+              "ToolTip": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.BLL\\RapportServices.cs",
+              "RelativeToolTip": "BibliothequeTP2.BLL\\RapportServices.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAcwFAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T18:34:38.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsagerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.DAL\\UsagerRepository.cs",
+              "RelativeDocumentMoniker": "BibliothequeTP2.DAL\\UsagerRepository.cs",
+              "ToolTip": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.DAL\\UsagerRepository.cs",
+              "RelativeToolTip": "BibliothequeTP2.DAL\\UsagerRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAG0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T19:42:59.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Emprunt.cs",
+              "DocumentMoniker": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.Entities\\Emprunt.cs",
+              "RelativeDocumentMoniker": "BibliothequeTP2.Entities\\Emprunt.cs",
+              "ToolTip": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.Entities\\Emprunt.cs",
+              "RelativeToolTip": "BibliothequeTP2.Entities\\Emprunt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T18:34:04.716Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Livre.cs",
+              "DocumentMoniker": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.Entities\\Livre.cs",
+              "RelativeDocumentMoniker": "BibliothequeTP2.Entities\\Livre.cs",
+              "ToolTip": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.Entities\\Livre.cs",
+              "RelativeToolTip": "BibliothequeTP2.Entities\\Livre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T18:31:59.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Database.cs",
               "DocumentMoniker": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.DAL\\Database.cs",
               "RelativeDocumentMoniker": "BibliothequeTP2.DAL\\Database.cs",
@@ -112,54 +164,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-19T18:35:27.337Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Usager.cs",
-              "DocumentMoniker": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.Entities\\Usager.cs",
-              "RelativeDocumentMoniker": "BibliothequeTP2.Entities\\Usager.cs",
-              "ToolTip": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.Entities\\Usager.cs",
-              "RelativeToolTip": "BibliothequeTP2.Entities\\Usager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T18:33:11.045Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Livre.cs",
-              "DocumentMoniker": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.Entities\\Livre.cs",
-              "RelativeDocumentMoniker": "BibliothequeTP2.Entities\\Livre.cs",
-              "ToolTip": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.Entities\\Livre.cs",
-              "RelativeToolTip": "BibliothequeTP2.Entities\\Livre.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T18:31:59.767Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RapportServices.cs",
-              "DocumentMoniker": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.BLL\\RapportServices.cs",
-              "RelativeDocumentMoniker": "BibliothequeTP2.BLL\\RapportServices.cs",
-              "ToolTip": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.BLL\\RapportServices.cs",
-              "RelativeToolTip": "BibliothequeTP2.BLL\\RapportServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T18:34:38.165Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EmpruntRepository.cs",
-              "DocumentMoniker": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.DAL\\EmpruntRepository.cs",
-              "RelativeDocumentMoniker": "BibliothequeTP2.DAL\\EmpruntRepository.cs",
-              "ToolTip": "C:\\Users\\abahm\\Desktop\\TP2_Bibliotheque\\BibliothequeTP2\\BibliothequeTP2.DAL\\EmpruntRepository.cs",
-              "RelativeToolTip": "BibliothequeTP2.DAL\\EmpruntRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T19:48:52.622Z"
             }
           ]
         }
